@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  /* Dark Mode */
+  html[data-theme='dark'] {
+    color-scheme: dark;
+  }
+
+  html[data-theme='dark'] body {
+    @apply bg-stone-950 text-[#bdb6ac];
+  }
+
+  html[data-theme='dark'] * {
+    @apply border-stone-800;
+  }
+
+  html[data-theme='dark'] .nav-link {
+    @apply text-stone-500 hover:text-stone-100;
+  }
+
+  html[data-theme='dark'] .nav-link-current {
+    @apply text-stone-100;
+  }
+
+  html[data-theme='dark'] .section-title {
+    @apply text-stone-100;
+  }
+
+  html[data-theme='dark'] .body-copy {
+    @apply text-[#bdb6ac];
+  }
+
+  html[data-theme='dark'] .meta-copy {
+    @apply text-stone-500;
+  }
+
+  html[data-theme='dark'] .card-link {
+    @apply text-stone-100 decoration-stone-700 hover:decoration-stone-300;
+  }
+
+  html[data-theme='dark'] .accent {
+    @apply text-purple-400;
+  }
+
+  html[data-theme='dark'] a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Light Mode */
+  html[data-theme='light'] {
+    color-scheme: light;
+  }
+
+  html[data-theme='light'] body {
+    @apply bg-[#e4dac7] text-[#5a5a4a];
+  }
+
+  html[data-theme='light'] * {
+    @apply border-[#d4c4a8];
+  }
+
+  html[data-theme='light'] .nav-link {
+    @apply text-[#8a8a70] hover:text-[#5a5a4a];
+  }
+
+  html[data-theme='light'] .nav-link-current {
+    @apply text-[#3a3a2a];
+  }
+
+  html[data-theme='light'] .section-title {
+    @apply text-[#3a3a2a];
+  }
+
+  html[data-theme='light'] .body-copy {
+    @apply text-[#5a5a4a];
+  }
+
+  html[data-theme='light'] .meta-copy {
+    @apply text-[#8a8a70];
+  }
+
+  html[data-theme='light'] .card-link {
+    @apply text-[#3a3a2a] decoration-[#d4c4a8] hover:decoration-[#8a8a70];
+  }
+
+  html[data-theme='light'] .accent {
+    @apply text-purple-600;
+  }
+
+  html[data-theme='light'] a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Common */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    font-family: var(--font-body), serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-body), serif;
+  }
+
+  body, p, span, a, li {
+    font-family: var(--font-body), serif;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-sm transition-colors;
+  }
+
+  .nav-link-current {
+    @apply font-semibold;
+  }
+
+  .section-title {
+    @apply mb-6 text-4xl font-semibold tracking-tight;
+  }
+
+  .body-copy {
+    @apply text-lg leading-8;
+  }
+
+  .meta-copy {
+    @apply text-base leading-7;
+  }
+
+  .card-link {
+    @apply underline underline-offset-4 transition-all duration-300 relative;
+  }
+
+  .card-link:hover {
+    @apply rounded-lg px-2 py-1 backdrop-blur-md bg-white/10 border border-white/20 no-underline;
+  }
+
+  html[data-theme='dark'] .card-link:hover {
+    @apply bg-black/5 border-black/10;
+  }
+
+  .name {
+    @apply text-stone-100;
+  }
+
+  html[data-theme='light'] .name {
+    @apply text-[#2a2a1a];
+  }
+}
