@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
-          cache-dependency-path: 'website-dom/package-lock.json'
+          cache-dependency-path: '**/package-lock.json'
 
       # FIXED: Safe install that works whether you have a lockfile or not
       - name: Install dependencies
