@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: "24"
 
       - name: Install dependencies
         working-directory: website-dom
@@ -34,10 +34,13 @@ jobs:
         working-directory: website-dom
         run: npx next build
 
+      - name: List output directory
+        run: ls -la website-dom/ | grep -E 'out|\.next'
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./website-dom/out
+          path: website-dom/out
 
   deploy:
     environment:
