@@ -21,11 +21,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # FIXED: Upgraded Node to 20 for Next.js 15 compatibility
+      # FIXED: Using Node 22 (latest stable)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           cache-dependency-path: 'website-dom/package-lock.json'
 
