@@ -81,7 +81,7 @@ export default function Home() {
         <div className="pt-6 lg:pt-12">
           <section id="home" className="max-w-3xl">
             <p className="body-copy text-stone-200">
-              Rising sophomore @ the{' '}
+              Rising high school sophomore @ the{' '}
               <a
                 href="https://ehs.edison.k12.nj.us/o/ehs/page/ehs-stem-academy"
                 target="_blank"
