@@ -21,14 +21,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # FIXED: Upgraded Node to 20 for Next.js 15 compatibility
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: '20'
 
+      # FIXED: Safe install that works whether you have a lockfile or not
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f "package-lock.json" ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Build
         run: npm run build
