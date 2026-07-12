@@ -13,6 +13,9 @@ const ebGaramond = EB_Garamond({
 export const metadata: Metadata = {
   title: 'Rayaan Mirkar',
   description: 'Computational biologist, machine learning researcher, neuroscience enthusiast',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
