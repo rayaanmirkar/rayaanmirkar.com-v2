@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+export const dynamic = 'force-dynamic'
+
 // Store views in memory (for demo - in production use a database or service)
 const views: Array<{
   path: string
