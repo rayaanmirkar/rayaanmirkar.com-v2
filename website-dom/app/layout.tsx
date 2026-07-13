@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { EB_Garamond } from 'next/font/google'
 import './globals.css'
 import ThemeToggle from './ThemeToggle'
-import ViewTracker from './components/ViewTracker'
 
 const ebGaramond = EB_Garamond({
   subsets: ['latin'],
@@ -29,7 +28,6 @@ export default function RootLayout({
       <body>
         {children}
         <ThemeToggle />
-        <ViewTracker />
       </body>
     </html>
   )
