@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { EB_Garamond } from 'next/font/google'
 import './globals.css'
 import ThemeToggle from './ThemeToggle'
+import ViewTracker from './components/ViewTracker'
 
 const ebGaramond = EB_Garamond({
   subsets: ['latin'],
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   title: 'Rayaan Mirkar',
   description: 'Computational biologist, machine learning researcher, neuroscience enthusiast',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.png',
   },
 }
 
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body>
         {children}
         <ThemeToggle />
+        <ViewTracker />
       </body>
     </html>
   )
