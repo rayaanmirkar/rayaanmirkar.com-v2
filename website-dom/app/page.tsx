@@ -2,6 +2,8 @@ const navigationItems = [
   { label: 'Home', href: '#home', current: true },
   { label: 'Current', href: '#current' },
   { label: 'Work', href: '#work' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Publications', href: '#publications' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -28,6 +30,32 @@ const workItems = [
     description:
       'A CLI for cloning research repositories, inferring dependencies locally, and reconstructing reproducible environments with less manual setup.',
     stack: 'Python · CLI · Local LLM tooling · Reproducibility',
+  },
+]
+
+const experienceItems = [
+  {
+    title: 'Summer Researcher',
+    company: 'The Waksman Institute, Rutgers University.',
+    period: 'Aug 2026',
+    description: '2026 vWISE - Working on analyzing genomic data using advanced bioinformatic tools and BLAST software to identify genetic variations, and contribute to NCBI GenBank.',
+    skills: 'DNA Seq · NCBI GenBank · Bioconductor',
+  },
+  
+]
+
+const skillsData = [
+  {
+    category: 'Programming Languages',
+    skills: ['Python', 'Java',],
+  },
+  {
+    category: 'Machine Learning & Data',
+    skills: ['TensorFlow', 'Keras', 'Brian2', 'Pandas', 'NumPy'],
+  },
+  {
+    category: 'Computational Methods',
+    skills: ['Deep Learning', 'RNNs', "LSTMs", "SNNs", ],
   },
 ]
 
@@ -133,6 +161,44 @@ export default function Home() {
                   <p className="body-copy">{item.description}</p>
                   <p className="meta-copy">{item.stack}</p>
                 </article>
+              ))}
+            </div>
+          </section>
+
+          <section id="experience" className="mt-20 max-w-3xl scroll-mt-24">
+            <h2 className="section-title">Experience</h2>
+            <div className="space-y-10">
+              {experienceItems.map((item, index) => (
+                <article key={item.title} className={`space-y-3 pb-10 ${index < experienceItems.length - 1 ? 'border-b border-stone-800/50' : ''}`}>
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                    <h3 className="text-xl text-stone-100">{item.title}</h3>
+                    <span className="meta-copy text-sm">{item.period}</span>
+                  </div>
+                  <p className="meta-copy">{item.company}</p>
+                  <p className="body-copy">{item.description}</p>
+                  <p className="meta-copy">{item.skills}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section id="skills" className="mt-20 max-w-3xl scroll-mt-24">
+            <h2 className="section-title">Skills</h2>
+            <div className="space-y-8">
+              {skillsData.map((skillGroup) => (
+                <div key={skillGroup.category} className="space-y-3">
+                  <h3 className="text-lg font-semibold text-stone-100">{skillGroup.category}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {skillGroup.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="inline-block px-3 py-1 text-sm bg-stone-800/50 border border-stone-700 text-stone-200 rounded"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </section>
