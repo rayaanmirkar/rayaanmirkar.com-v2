@@ -6,14 +6,13 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-slate-500 text-sm">
-            © 2024 Alex Chen. Built with Next.js & Tailwind.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
-              Privacy
+              
             </a>
             <a href="#" className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
-              Terms
+              
             </a>
           </div>
         </div>

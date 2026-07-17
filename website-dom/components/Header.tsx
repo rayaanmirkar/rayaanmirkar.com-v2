@@ -7,7 +7,6 @@ export default function Header() {
     <header className="bg-black border-b border-slate-800 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-semibold text-white">
-          Alex Chen
         </Link>
         <nav className="flex gap-8">
           <a href="#about" className="text-slate-300 hover:text-white transition-colors">

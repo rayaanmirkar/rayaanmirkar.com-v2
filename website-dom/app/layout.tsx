@@ -12,7 +12,7 @@ const ebGaramond = EB_Garamond({
 
 export const metadata: Metadata = {
   title: 'Rayaan Mirkar',
-  description: 'Computational biologist, machine learning researcher, neuroscience enthusiast',
+  description: 'Computational Neuroscience Researcher',
   icons: {
     icon: '/favicon.png',
   },
