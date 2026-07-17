@@ -1,8 +1,7 @@
 const navigationItems = [
   { label: 'Home', href: '#home', current: true },
-  { label: 'Current', href: '#current' },
-  { label: 'Work', href: '#work' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Work', href: '#work' },
   { label: 'Skills', href: '#skills' },
   { label: 'Publications', href: '#publications' },
   { label: 'Contact', href: '#contact' },
@@ -136,13 +135,19 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="current" className="mt-20 max-w-3xl scroll-mt-24">
-            <h2 className="section-title">Current</h2>
-            <div className="space-y-5">
-              {currentItems.map((item) => (
-                <p key={item} className="body-copy">
-                  {item}
-                </p>
+          <section id="experience" className="mt-20 max-w-3xl scroll-mt-24">
+            <h2 className="section-title">Experience</h2>
+            <div className="space-y-10">
+              {experienceItems.map((item, index) => (
+                <article key={item.title} className={`space-y-3 pb-10 ${index < experienceItems.length - 1 ? 'border-b border-stone-800/50' : ''}`}>
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                    <h3 className="text-xl text-stone-100">{item.title}</h3>
+                    <span className="meta-copy text-sm">{item.period}</span>
+                  </div>
+                  <p className="meta-copy">{item.company}</p>
+                  <p className="body-copy">{item.description}</p>
+                  <p className="meta-copy">{item.skills}</p>
+                </article>
               ))}
             </div>
           </section>
@@ -160,23 +165,6 @@ export default function Home() {
                   <p className="meta-copy">{item.meta}</p>
                   <p className="body-copy">{item.description}</p>
                   <p className="meta-copy">{item.stack}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section id="experience" className="mt-20 max-w-3xl scroll-mt-24">
-            <h2 className="section-title">Experience</h2>
-            <div className="space-y-10">
-              {experienceItems.map((item, index) => (
-                <article key={item.title} className={`space-y-3 pb-10 ${index < experienceItems.length - 1 ? 'border-b border-stone-800/50' : ''}`}>
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
-                    <h3 className="text-xl text-stone-100">{item.title}</h3>
-                    <span className="meta-copy text-sm">{item.period}</span>
-                  </div>
-                  <p className="meta-copy">{item.company}</p>
-                  <p className="body-copy">{item.description}</p>
-                  <p className="meta-copy">{item.skills}</p>
                 </article>
               ))}
             </div>
