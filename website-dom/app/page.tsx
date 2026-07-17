@@ -136,9 +136,9 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="current" className="mt-20 max-w-3xl scroll-mt-24">
-            <h2 className="section-title">Current</h2>
-            <div className="space-y-5">
+          <section id="current" className="mt-32 max-w-3xl scroll-mt-24">
+            <h2 className="section-title mb-8">Current</h2>
+            <div className="space-y-6">
               {currentItems.map((item) => (
                 <p key={item} className="body-copy">
                   {item}
@@ -147,9 +147,9 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="work" className="mt-20 max-w-3xl scroll-mt-24">
+          <section id="work" className="mt-32 max-w-3xl scroll-mt-24">
             <h2 className="section-title">Work</h2>
-            <div className="space-y-10">
+            <div className="space-y-8">
               {workItems.map((item, index) => (
                 <article key={item.title} className={`space-y-3 pb-10 ${index < workItems.length - 1 ? 'border-b border-stone-800/50' : ''}`}>
                   <h3 className="text-xl text-stone-100">
@@ -165,8 +165,8 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="experience" className="mt-20 max-w-3xl scroll-mt-24">
-            <h2 className="section-title">Experience</h2>
+          <section id="experience" className="mt-32 max-w-3xl scroll-mt-24">
+            <h2 className="section-title mb-8">Experience</h2>
             <div className="space-y-10">
               {experienceItems.map((item, index) => (
                 <article key={item.title} className={`space-y-3 pb-10 ${index < experienceItems.length - 1 ? 'border-b border-stone-800/50' : ''}`}>
@@ -182,8 +182,8 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="skills" className="mt-20 max-w-3xl scroll-mt-24">
-            <h2 className="section-title">Skills</h2>
+          <section id="skills" className="mt-32 max-w-3xl scroll-mt-24">
+            <h2 className="section-title mb-8">Skills</h2>
             <div className="space-y-8">
               {skillsData.map((skillGroup) => (
                 <div key={skillGroup.category} className="space-y-3">
@@ -203,15 +203,15 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="publications" className="mt-20 max-w-3xl scroll-mt-24">
-            <h2 className="section-title">Publications</h2>
+          <section id="publications" className="mt-32 max-w-3xl scroll-mt-24">
+            <h2 className="section-title mb-8">Publications</h2>
             <p className="body-copy">
               Formal publications are still in progress. This section will track papers, posters, and research.
             </p>
           </section>
 
-          <section id="contact" className="mt-20 max-w-3xl scroll-mt-24 pb-4">
-            <h2 className="section-title">Contact</h2>
+          <section id="contact" className="mt-32 max-w-3xl scroll-mt-24 pb-4">
+            <h2 className="section-title mb-8">Contact</h2>
             <p className="body-copy">
               The fastest way to reach me is by{' '}
               <a href="mailto:raymirkar@gmail.com" className="card-link">
