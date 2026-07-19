@@ -7,12 +7,6 @@ const navigationItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
-const currentItems = [
-  'Building BiLSTM pipelines to classify bacteriophage lifestyle from proteome-scale patterns.',
-  'Exploring genome chunking strategies that preserve biological context without making training prohibitively expensive.',
-  //'Studying synaptic scaling and homeostasis computationally, with an emphasis on olfactory circuits.',
-]
-
 const workItems = [
   {
     title: 'PHAGER: BiLSTM Neural Networks for Bacteriophage Lifestyle Classification',
