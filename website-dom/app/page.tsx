@@ -115,8 +115,7 @@ export default function Home() {
             </p>
             <div className="mt-6 space-y-5">
               <p className="body-copy">
-                I use computational methods to study biological systems, especially problems where sequence structure,
-                context, and scale make simple models fall short.
+                I mainly work on my own, indepedent, computational pipelines and other research simulations, though I am open to collaborating on potential projects.
               </p>
               <p className="body-copy">
                 My current work centers on bacteriophage proteomes, long-range neural sequence models, and efficient
