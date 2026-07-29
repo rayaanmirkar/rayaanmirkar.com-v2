@@ -9,7 +9,7 @@ const navigationItems = [
 
 const workItems = [
   {
-    title: 'PHAGER: BiLSTM Neural Networks for Bacteriophage Lifestyle Classification',
+    title: 'PhaLSTM: BiLSTM Neural Networks for Bacteriophage Lifestyle Classification',
     href: 'https://github.com/rayaanmirkar/bilstm-classification',
     meta: 'Independent research project',
     description:
