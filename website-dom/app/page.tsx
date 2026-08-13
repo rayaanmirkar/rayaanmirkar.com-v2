@@ -1,7 +1,6 @@
 const navigationItems = [
   { label: 'Home', href: '#home', current: true },
   { label: 'Work', href: '#work' },
-  { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
   { label: 'Publications', href: '#publications' },
   { label: 'Contact', href: '#contact' },
@@ -26,16 +25,17 @@ const workItems = [
   },
 ]
 
-const experienceItems = [
-  {
-    title: 'Summer Researcher',
-    company: 'The Waksman Institute, Rutgers University.',
-    period: 'Aug 2026',
-    description: '2026 vWISE - Working on analyzing genomic data using advanced bioinformatic tools and BLAST software to identify genetic variations, and contribute to NCBI GenBank.',
-    skills: 'DNA Seq · NCBI GenBank · Bioconductor',
-  },
-  
-]
+// const experienceItems = [
+//   {
+//     title: 'Summer Researcher',
+//     company: 'The Waksman Institute, Rutgers University.',
+//     period: 'Aug 2026',
+//     description: '2026 vWISE - Working on analyzing genomic data using advanced bioinformatic tools and BLAST software to identify genetic variations, and contribute to NCBI GenBank.',
+//     skills: 'DNA Seq · NCBI GenBank · Bioconductor',
+//   },
+//   
+// ]
+// Hidden for now - uncomment to show experience section
 
 const skillsData = [
   {
@@ -115,11 +115,10 @@ export default function Home() {
             </p>
             <div className="mt-6 space-y-5">
               <p className="body-copy">
-                I mainly work on my own, indepedent, computational pipelines and other research simulations, though I am open to collaborating on potential projects.
+                I mainly work on my own, independent, research projects, though I am open to collaborating on potential projects.
               </p>
-              <p className="body-copy">I am currently working at the Waksman Institute of Microbiology as a student researcher, where I am conducting molecular biology and bioinformatics research to analyze genomic fragment data from Landoltia punctata.
-                My current work centers on bacteriophage proteomes, long-range neural sequence models, and efficient
-                training pipelines that make biology-heavy machine learning more practical.
+              <p className="body-copy">
+                I am currently working at the Waksman Institute of Microbiology as a student researcher, where I am conducting molecular biology and bioinformatics research to analyze genomic fragment data from Landoltia punctata. My current work centers on bacteriophage proteomes, long-range neural sequence models, and efficient training pipelines that make biology-heavy machine learning more practical.
               </p>
               <p className="body-copy">
                 I also work in computational neuroscience, with a focus on synaptic homeostasis and how
@@ -146,7 +145,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="experience" className="mt-20 max-w-3xl scroll-mt-24">
+          {/* <section id="experience" className="mt-20 max-w-3xl scroll-mt-24">
             <h2 className="section-title">Experience</h2>
             <div className="space-y-10">
               {experienceItems.map((item, index) => (
@@ -161,7 +160,7 @@ export default function Home() {
                 </article>
               ))}
             </div>
-          </section>
+          </section> */}
 
           <section id="skills" className="mt-20 max-w-3xl scroll-mt-24">
             <h2 className="section-title">Skills</h2>
